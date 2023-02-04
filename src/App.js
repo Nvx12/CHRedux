@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AddList from "./Components/AddList";
+import TasksList from "./Components/TasksList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="page-content page-container" id="page-content">
+        <div className="padding">
+          <div className="row container d-flex justify-content-center">
+            <div className="col-md-12">
+              <div className="card px-3">
+                <div className="card-body">
+                  <h4 className="card-title">Todo list</h4>
+                  <AddList />
+                  <TasksList />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
